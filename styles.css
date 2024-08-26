@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-section {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 50px;
+}
+
+.hero-section p {
+    font-size: 20px;
+}
+
+.about-section, .projects-section, .blog-section, .contact-section {
+    padding: 50px 0;
+}
+
+.about-section h2, .projects-section h2, .blog-section h2, .contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-item, .blog-post {
+    margin-bottom: 20px;
+}
+
+.project-item h3, .blog-post h3 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.degree {
+    color: #fff; /* Couleur blanche par exemple */
+}
+/* -------------------------------------------------------------------------------------------------------------------------*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d2b;
+    color: white;
+}
+.container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 600;
+}
+.education-section {
+    width: 60%;
+    background-color: #1f1f3f;
+    padding: 20px;
+    border-radius: 10px;
+}
+.education-item {
+    background-color: #292950;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+.education-item:hover {
+    transform: scale(1.05);
+}
+.education-item .icon {
+    background-color: #47477d;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.education-item .icon img {
+    width: 25px;
+    height: 25px;
+}
+.education-item .details {
+    flex-grow: 1;
+}
+.education-item .details h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.education-item .details p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #b3b3d1;
+}
+.education-item .year {
+    font-weight: 300;
+    font-size: 0.9em;
+    color: #7f7fa6;
+}
+.illustration {
+    margin-top: 40px;
+}
+.illustration img {
+    width: 400px;
+    max-width: 100%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.projects-section {
+    background-color: #0d0d2b;
+    padding: 50px 0;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping onto the next line */
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center; /* Centers the items horizontally */
+}
+
+.project-item {
+    flex: 1 1 calc(33.333% - 20px); /* Allows up to three items per row, accounting for the gap */
+    max-width: calc(33.333% - 20px); /* Ensures the item does not exceed 33.333% of the container's width */
+    background-color: #1f1f3f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: #b3b3d1;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Responsive Design: Adjusts the number of items per row on smaller screens */
+@media (max-width: 1024px) {
+    .project-item {
+        flex: 1 1 calc(33.333% - 20px); /* Maintains three items per row */
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 calc(50% - 20px); /* Allows two items per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        flex: 1 1 100%; /* Allows one item per row */
+        max-width: 100%;
+    }
+}
+
+
+/* Back to Top Button Styling */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.back-to-top:hover {
+    background-color: #555; /* Darker background on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.back-to-top i {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+/* Me Section Styling */
+.me-section {
+    padding: 20px;
+}
+
+.container1 {
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 0 auto;
+}
+
+.me-content {
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center items */
+    gap: 20px; /* Space between text and image */
+}
+
+.me-content h2 {
+    margin-top: 0; /* Remove default margin on top of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.me-content p {
+    flex: 1; /* Text takes up available space */
+    margin: 0; /* Remove default margin */
+    line-height: 1.6; /* Improve readability */
+}
+
+.me-image {
+    width: 300px; /* Fixed width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round corners */
+}
