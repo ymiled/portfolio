@@ -1,29 +1,63 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode Colors */
+        --background-light: #242424;
+        --text-light: #ffffff;
+        --nav-background-light: #1f1f1f;
+        --nav-text-light: #ffffff ;
+        --section-background-light: #333;
+        --section-text-light: #ffffff;
+        --project-background-light: #2c2c2c;
+        --project-text-light: #b3b3b3;
+        --border-color-dark: #bdb3b3;
+        --underline-color: rgb(34, 152, 255);
+        --active-color-light: blue;
+        --social-colors:black;
+        --cursor-on-social-icons: #007bff;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: white;
-    color: black; /* Default text color set to black */
 }
 
-.container1, .container {
+.container-me {
     width: 80%;
     margin: auto;
+    margin-top: 1%;
     height: 100%;
     overflow: hidden;
 }
 
 .container {
-    height: 110vh;
+    height: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container-download {
+    width: 25%;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 
-
-.container2 {
+.container-home {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -38,42 +72,91 @@ body {
 }
 
 nav {
-    background: #333;
-    color: #fff;
+    height: 10px;
     padding: 15px 0;
+    position: relative; 
+}
+
+.index-nav {
+    height: 450px; /* Ensure same height as other pages */
+}
+
+.projects-nav {
+    height: 60px; /* Ensure same height as other pages */
+}
+
+nav .navigation {
+    position: fixed; 
+    top: -10px; 
+    left: 0;
+    right: 0;
+    margin-bottom: 10px;
+    justify-content: left;
+    padding-left: 40%;
+    border-bottom: 1px solid var(--border-color-dark); 
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
 }
 
 nav ul {
     padding: 0;
     list-style: none;
-    text-align: right;
+    text-align: left;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 15px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: var(--nav-text-dark);
 }
 
+/* Hover Effects */
+.navigation ul li a:hover {
+    color: var(--underline-color); 
+}
+
+/* Show underline on hover */
+.navigation ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left; 
+}
+
+body.dark-mode .navigation ul li a:hover {
+    color:rgb(140, 36, 119);
+}
+
+body.dark-mode .projects-container {
+    transition: background-color 1s, color 1s; /* Smooth transition with 2s duration */
+    color: #010000; /* Ensure text is white in all sections */
+}
+
+/* Active Link Styles */
+.navigation ul li a.active {
+    color: var(--active-color-light); /* Active color for light mode */
+}
+
+
+body.dark-mode .navigation ul li a.active {
+    color:rgb(225, 61, 146);
+}
+
+body.dark-mode .navigation {
+    background-color: rgba(31, 31, 31, 0.8);
+}
 .hero-section {
-    color: black;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 1%;
 }
 
 .hero-section h2 {
     font-size: 50px;
-}
-
-.hero-section p {
-    font-size: 20px;
 }
 
 
@@ -84,7 +167,6 @@ nav ul li a {
 
 .hero-section h2 {
     font-size: 50px;
-    color: black;
 }
 
 .hero-section p {
@@ -101,18 +183,6 @@ nav ul li a {
     transition: background 0.3s ease;
 }
 
-.btn:hover {
-    background: #555;
-}
-
-.about-section, .projects-section, .blog-section, .contact-section {
-    padding: 50px 0;
-}
-
-.about-section h2, .projects-section h2, .blog-section h2, .contact-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 .project-item, .blog-post {
     margin-bottom: 20px;
@@ -122,19 +192,48 @@ nav ul li a {
 
 }
 
+.project-item h {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .project-item h3, .blog-post h3 {
     margin-bottom: 10px;
 }
 
 .project-icon {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     margin-right: 20px;
-    border-radius: 50%; 
+    border-radius: 100%; 
+    object-fit: cover;    /* Ensures the image fits the circular shape */
 }
 
 .projects-section {
     flex-direction: column;
+}
+
+.experience-icon {
+    width: 130px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.icon i {
+    font-size: 20px;
+    color: var(--nav-background-light); 
+}
+
+body.dark-mode .icon i  {
+    color: #ffffff; 
+    transition : color 0.3s;
+}
+
+
+.centrale-icon {
+    width: 180px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 
@@ -164,15 +263,81 @@ footer ul li a {
     color: #fff;
 }
 
+
+.illustration {
+    margin-top: 40px;
+}
+
+.illustration img {
+    width: 400px;
+    max-width: 100%;
+}
+
+
+
+.projects-research-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+}
+
+.projects-content, .research-content {
+    width: 48%; 
+    height: 100%;
+}
+
+.projects-content {
+    text-align: center;
+}
+
+.research-content {
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    gap: 40px;
+    justify-items: center;
+}
+
+.project-item {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+.project-item p {
+    color: #666;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .education-section {
     width: 60%;
-    background-color: white;
     padding: 20px;
     border-radius: 10px;
 }
 
 .education-item {
-    background-color: white;
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 10px;
@@ -187,16 +352,17 @@ footer ul li a {
 }
 
 .education-item .icon {
-    background-color: black;
     padding: 10px;
-    border-radius: 50%;
     margin-right: 15px;
 }
 
 .education-item .icon img {
+    background-color: #1f1f1f;
     width: 25px;
     height: 25px;
 }
+
+
 
 .education-item .details {
     flex-grow: 1;
@@ -211,13 +377,11 @@ footer ul li a {
 .education-item .details p {
     margin: 5px 0 0;
     font-size: 0.9em;
-    color: black;
 }
 
 .education-item .year {
     font-weight: 300;
     font-size: 0.9em;
-    color: black;
 }
 
 .illustration {
@@ -229,75 +393,11 @@ footer ul li a {
     max-width: 100%;
 }
 
-.projects-section {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.projects-container {
-    display: grid;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    justify-items: center;
-}
-
-.project-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-}
-
-.project-item h3 {
-    margin-top: 0;
-}
-
-.project-item p {
-    color: #666;
-    /*text-align: justify;   */  
-}
-.project-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.toggle-btn:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-.me-section {
-    padding: 20px;
-}
 
 .me-content {
     display: flex;
     gap: 20px;
-    align-items: flex-start; /* Align items to the top of the container */
+    align-items: flex-start;
 }
 
 .me-content h2 {
@@ -316,8 +416,8 @@ footer ul li a {
 .me-image {
     margin-top: 50px;
     margin-left: 10px;
-    width: 230px;
-    height: 270px;
+    width: 210px;
+    height: 310px;
     border-radius: 8px;
 }
 
@@ -342,47 +442,44 @@ footer ul li a {
     background-color: #555;
     transform: scale(1.1);
 }
-
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #000;
-        --text: #fff;
-    }
-
-    .social-icons .icon {
-        color: var(--icon-dark);
-    }
-}
-
-/* Light mode styles */
-@media (prefers-color-scheme: light) {
-    :root {
-        --background: #fff;
-        --text: #000;
-    }
-
-    .social-icons .icon {
-        color: var(--icon-light);
-    }
-}
-
+/* Social Icons Styles */
 .social-icons {
     display: flex;
-    gap: 2rem;
     justify-content: center;
-    margin-bottom: 30px;
-    margin-top: 15px;
+    margin: 20px 0;
 }
 
 .social-icons .icon {
-    font-size: 40px;
-    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
 
-.social-icons .icon:hover {
-    opacity: 0.7;
+.social-icons .icon-linkedin {
+    font-size: 40px;
+    padding-right: 20px;
+    color: var(--social-colors);
+}
+
+.social-icons .icon-github {
+    font-size: 40px;
+    padding-right: 20px;
+    color: var(--social-colors);
+}
+
+.social-icons .icon-mail {
+    font-size: 40px;
+    color: var(--social-colors);
+}
+
+.social-icons .icon-linkedin:hover {
+    color: var(--cursor-on-social-icons);
+}
+.social-icons .icon-github:hover {
+    color: var(--cursor-on-social-icons);
+}
+
+.social-icons .icon-mail:hover {
+    color: var(--cursor-on-social-icons);
 }
 
 
@@ -394,7 +491,6 @@ footer ul li a {
 .teaching-section h2 {
     font-size: 2em;
     margin-bottom: 30px;
-    color: #333; /* Adjust color as needed */
 }
 
 .teaching-list {
@@ -406,7 +502,6 @@ footer ul li a {
 }
 
 .teaching-item {
-    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -427,13 +522,12 @@ footer ul li a {
 }
 
 .teaching-details {
-    text-align: left;
+    justify-content: center;
 }
 
 .teaching-details h3 {
     margin: 0 0 10px;
     font-size: 1.5em;
-    color: #333; /* Adjust color as needed */
 }
 
 .teaching-details p {
@@ -443,54 +537,82 @@ footer ul li a {
     line-height: 1.6;
 }
 
+.download-link {
+    font-size: 18px;
+    color: var(--nav-text-dark);
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s;
+}
 
+.download-link:hover {
+    color: var(--cursor-on-social-icons);
+}
 
 /* Light/Dark Mode Toggle Styles */
-#darkmode-toggle {
-    margin-top: 10px;
-    display: none;
-}
 
-#darkmode-toggle + label {
-    width: 60px; /* Adjusted width */
-    height: 30px; /* Adjusted height */
-    background: #ebebeb;
-    border-radius: 15px; /* Adjusted border radius */
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#darkmode-toggle + label:before {
-    content: "";
-    width: 25px; /* Adjusted width */
-    height: 25px; /* Adjusted height */
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 50%;
-    position: absolute;
-    top: 2.5px; /* Adjusted position */
-    left: 2.5px; /* Adjusted position */
-    transition: transform 0.3s;
-}
-
-#darkmode-toggle:checked + label {
-    background: #242424;
-}
-
-#darkmode-toggle:checked + label:before {
-    transform: translateX(30px); /* Adjusted distance */
-    background: linear-gradient(180deg, #777, #3a3a3a);
-}
 
 body.dark-mode {
-    background: #242424;
-    color: #ffffff;
+    background-color: #1E1E1E ; /* Dark mode background */
+    color: #e0e0e0; /* Dark mode text */
 }
 
-body.dark-mode .background {
-    background: #242424;
+/* Hide the checkbox visually */
+#darkmode-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
+
+/* Container for the toggle switch */
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 0; 
+    margin-right: 20px;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 0 10px;
+    position: relative;
+}
+
+.sun-icon, .moon-icon {
+    font-size: 20px;
+    position: absolute;
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    background: none;
+    margin-top: 17px;
+}
+
+.sun-icon {
+    color: #f39c12; /* Sun color */
+    opacity: 0; /* Start with moon icon hidden */
+
+}
+
+.moon-icon {
+    color: #3498db; /* Moon color */
+}
+
+
+#darkmode-toggle:checked + .toggle-label .sun-icon {
+    opacity: 1; /* Hide moon icon */
+}
+
+#darkmode-toggle:checked + .toggle-label .moon-icon {
+    opacity: 0; /* Show sun icon */
+}
+
 
 body.dark-mode .hero-section,
 body.dark-mode .title,
@@ -503,11 +625,56 @@ body.dark-mode .blog-section,
 body.dark-mode .contact-section,
 body.dark-mode .me-section,
 body.dark-mode .experience,
-body.dark-mode .hero-section h2,
-body.dark-mode .projects-section {
-    transition: background-color 2s, color 2s; /* Smooth transition with 2s duration */
-    color: #ffffff; /* Ensure text is white in all sections */
+body.dark-mode .hero-section,
+body.dark-mode .container,
+body.dark-mode .container h2,
+body.dark-mode .download-link {
+    transition: background-color 0.3s, color 0.3s; 
+    color: #ffffff; 
+}
+
+body.dark-mode .projects-container {
+    transition: background-color 0.3s, color 0.3s; 
+    color: #010000; 
 }
 
 
+body.dark-mode .container-download {
+    transition: background-color 0.3s, color 0.3s;
+    color: #010000; 
+}
+
+body.dark-mode .social-icons .icon {
+    color: white; /* White icon color for dark mode */
+}
+
+body.dark-mode .social-icons .icon-linkedin {
+    color: white;
+}
+
+body.dark-mode .social-icons .icon-github {
+    color: white;
+}
+
+body.dark-mode .social-icons .icon-mail {
+    color: white;
+}
+
+body.dark-mode .social-icons .icon-linkedin:hover {
+    color:rgb(140, 36, 119);
+}
+
+body.dark-mode .social-icons .icon-github:hover {
+    color:rgb(140, 36, 119);
+}
+
+body.dark-mode .social-icons .icon-mail:hover {
+    color:rgb(140, 36, 119);
+}
+
+
+
+body.dark-mode .download-link:hover {
+    color:rgb(140, 36, 119);
+}
 

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Miled - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .programming-languages {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .language-logo {
+            height: 40px; /* Adjust the size as needed */
+            margin: 0 20px;
+        }
+
+        .programming-languages {
+            text-align: center; /* Center-aligns the title and contents */
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="navigation">
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="resume.html">CV</a></li>
+                <li>
+                    <!-- Light/Dark Mode Toggle Button -->
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="darkmode-toggle" />
+                        <label for="darkmode-toggle" class="toggle-label">
+                            <i class="fas fa-moon moon-icon"></i>
+                            <i class="fas fa-sun sun-icon"></i>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="hero-section">
+    <div class="container-me">
+        <h2>Youssef Miled</h2>
+        <p class="typewriter">I'm <span class="typing-text"></span></p>
+        <div class="container-me">
+            <div class="me-content">
+                <p>
+                    Hi, I'm Youssef, a multidisciplinary engineering student at Centrale Lyon with a deep passion for mathematics and computer science. 
+                    Throughout my academic and research experiences, I've cultivated skills in pure mathematics, algorithms, programming, and machine learning. 
+                    My research interests broadly lie in formal methods, data analysis, and theoretical machine learning. <br><br>
+                    
+                    Outside the academic sphere, I've expanded my practical skills by developing an Android application prototype designed to enhance classroom learning, 
+                    as well as contributing to the development of MyECL, the Centrale Lyon app.<br><br>
+                    I am also dedicated to teaching and helping students improve their understanding, and draw out knowledge that is already within them.  <br><br>
+                    I was previously a student of the MP2I/MPI preparatory classes at Lycée Champollion (a program designed to prepare students for the entrance to
+                    the top French 'Grandes Ecoles') where I developed a strong foundation in pure mathematics, computer science, and physics.<br> <br>
+                    In my free time, I enjoy playing football, reading, and watching series.
+                </p>
+                <img src="images/my_photo.jpg" alt="Youssef Miled" class="me-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programming Languages Section -->
+<div class="programming-languages">
+    <div class="languages-marquee">
+    <h2>My skills</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C" class="language-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="language-logo">
+        <img src="images/ocaml_logo.webp" alt="OCaml" class="language-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" alt="Java" class="language-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" class="language-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="MATLAB" class="language-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" class="language-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" class="language-logo">
+    </div>
+</div>
+
+
+<div class="social-icons">
+    <a href="https://linkedin.com/in/youssef-miled" target="_blank" class="icon-linkedin">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/ymiled" target="_blank" class="icon-github">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:youssef.miled@etu.ec-lyon.fr" class="icon-mail">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+</section>
+
+<!-- Button back to top -->
+<a href="#" class="back-to-top" id="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+</body>
+
+
+<script src="scripts.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the dark mode toggle element
+    const darkModeToggle = document.getElementById('darkmode-toggle');
+
+    // Check the local storage for the current theme
+    const currentTheme = localStorage.getItem('theme');
+
+    // Apply the theme based on local storage value
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (darkModeToggle) {
+            darkModeToggle.checked = true;
+        }
+    } else {
+        document.body.classList.remove('dark-mode');
+        if (darkModeToggle) {
+            darkModeToggle.checked = false;
+        }
+    }
+
+    // Handle dark mode toggle change
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</html>
