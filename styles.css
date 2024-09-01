@@ -380,6 +380,7 @@ footer ul li a {
 
 .project-item p {
     color: #666;
+    text-align: justify;
 }
 
 .project-link {
