@@ -598,7 +598,7 @@ footer ul li a {
 
 .download-link {
     font-size: 18px;
-    color: var(--nav-text-dark);
+    color: #666;
     text-decoration: none; /* Remove underline */
     transition: background-color 0.3s, color 0.3s;
 }
@@ -686,12 +686,14 @@ body.dark-mode .me-section,
 body.dark-mode .experience,
 body.dark-mode .hero-section,
 body.dark-mode .container,
-body.dark-mode .container h2,
-body.dark-mode .download-link {
+body.dark-mode .container h2 {
     transition: background-color 0.3s, color 0.3s; 
     color: #ffffff; 
 }
 
+body.dark-mode .download-link {
+    color: #b3b3b3;
+}
 body.dark-mode .projects-container {
     transition: background-color 0.3s, color 0.3s; 
     color: #010000; 
