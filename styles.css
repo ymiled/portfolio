@@ -125,7 +125,6 @@ nav .navigation {
     right: 0;
     margin-bottom: 10px;
     justify-content: left;
-    padding-left: 40%;
     border-bottom: 1px solid var(--border-color-dark); 
     background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
 }
@@ -133,7 +132,7 @@ nav .navigation {
 nav ul {
     padding: 0;
     list-style: none;
-    text-align: left;
+    text-align: center;
 }
 
 nav ul li {
@@ -143,6 +142,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    font-size: 0.9em;
     color: var(--nav-text-dark);
 }
 
@@ -401,6 +401,7 @@ footer ul li a {
     align-items: center;
     justify-content: space-between;
     transition: transform 0.3s;
+    
 }
 
 .education-item:hover {
@@ -431,13 +432,14 @@ footer ul li a {
 }
 
 .education-item .details p {
-    margin: 5px 0 0;
+    margin-top: 5px;
     font-size: 0.9em;
 }
 
 .education-item .year {
     font-weight: 300;
     font-size: 0.9em;
+    padding-left:px;
 }
 
 .illustration {
