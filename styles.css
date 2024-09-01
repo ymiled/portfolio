@@ -179,19 +179,21 @@ body.dark-mode .navigation {
     background-color: rgba(31, 31, 31, 0.8);
 }
 .hero-section {
-    height: 110vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 1%;
+    margin-bottom: 0.01%;
     margin-top: 2%;
+    padding: 4px 0; /* Add padding to control space around content */
+
 }
 
 @media (max-width: 1024px) {
     .hero-section {
-        height: 190vh;
+        height: auto;
     }
     .container-me {
         flex-direction: column; /* Stack items vertically */
