@@ -131,18 +131,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    var container = document.getElementById('page-container'); // Replace with the ID of your container
+    var startX;
+    var startY;
+    var threshold = 100; // Minimum distance to detect swipe
 
-    var hammer = new Hammer(container);
-
-    hammer.on('swipeleft', function () {
-        // Next page
-        window.location.href = 'resume.html'; 
+    document.addEventListener('touchstart', function (e) {
+        var touch = e.touches[0];
+        startX = touch.pageX;
+        startY = touch.pageY;
     });
+    document.addEventListener('DOMContentLoaded', function () {
+        var container = document.getElementById('page-container'); // Replace with the ID of your container
 
-    hammer.on('swiperight', function () {
-        // Previous page
-        window.location.href = 'projects.html';
+        var hammer = new Hammer(container);
+
+        hammer.on('swipeleft', function () {
+            // Next page
+            window.location.href = 'projects.html'; 
+        });
+
+        hammer.on('swiperight', function () {
+            // Previous page
+            window.location.href = 'resume.html';
+        });
     });
 });
 
