@@ -27,23 +27,55 @@ body {
 .container-me {
     width: 80%;
     margin: auto;
-    margin-top: 1%;
-    height: 100%;
+    margin-bottom: 10%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-typewriter {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10%;
     overflow: hidden;
 }
 
+
 .container {
-    height: 100%;
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 5%
+    margin-top: 0;
+}
+
+.container-cv {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 80px;
+}
+
+
+.container-experience {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .container-download {
+    text-align: center;
     width: 25%;
     margin: auto;
     margin-top: 150px;
@@ -66,9 +98,9 @@ body {
 }
 
 .title {
-    margin-bottom: 20em;
+    margin-bottom: 20px;
     font-size: 2em;
-    font-weight: 60;
+    font-weight: 600;
 }
 
 nav {
@@ -147,12 +179,32 @@ body.dark-mode .navigation {
     background-color: rgba(31, 31, 31, 0.8);
 }
 .hero-section {
-    height: 85vh;
+    height: 110vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 190vh;
+    }
+    .container-me {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .me-image {
+        order: -1; /* Place the image before the text */
+        margin-bottom: 20px; /* Add space between the image and text */
+    }
+
+
 }
 
 .hero-section h2 {
@@ -182,83 +234,6 @@ body.dark-mode .navigation {
     border-radius: 5px;
     transition: background 0.3s ease;
 }
-
-
-
-
-
-/* Media Queries for Tablets and Phones */
-@media (max-width: 1024px) {
-    .container-me, .container {
-        width: 90%;
-    }
-
-    .container-download {
-        width: 50%;
-        margin-top: 100px;
-    }
-
-    .title {
-        margin-bottom: 15em;
-        font-size: 1.8em;
-    }
-
-    .hero-section h2 {
-        font-size: 40px;
-    }
-
-    .hero-section p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container-download {
-        width: 80%;
-        margin-top: 80px;
-    }
-
-    nav .navigation {
-        padding-left: 20%;
-    }
-
-    .hero-section h2 {
-        font-size: 30px;
-    }
-
-    .hero-section p {
-        font-size: 16px;
-    }
-
-    .btn {
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-download {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    nav .navigation {
-        padding-left: 10%;
-    }
-
-    .hero-section h2 {
-        font-size: 25px;
-    }
-
-    .hero-section p {
-        font-size: 14px;
-    }
-
-    .btn {
-        padding: 6px 12px;
-    }
-}
-
-
 
 
 
@@ -358,6 +333,7 @@ footer ul li a {
     justify-content: space-between;
     gap: 20px;
     height: 100%;
+    margin-top: 80px;
 }
 
 .projects-content, .research-content {
@@ -411,7 +387,6 @@ footer ul li a {
 
 .education-section {
     width: 60%;
-    padding: 20px;
     border-radius: 10px;
 }
 
@@ -474,6 +449,7 @@ footer ul li a {
 
 .me-content {
     display: flex;
+    flex-direction: row;
     gap: 20px;
     align-items: flex-start;
 }
@@ -562,7 +538,6 @@ footer ul li a {
 
 
 .teaching-section {
-    padding: 50px 0;
     text-align: center;
 }
 
