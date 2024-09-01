@@ -64,3 +64,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    var container = document.getElementById('page-container');
+
+    var hammer = new Hammer(container);
+
+    // Page mapping
+    var pageMapping = {
+        'index.html': { next: 'projects.html', previous: 'index.html' },
+        'projects.html': { next: 'experience.html', previous: 'index.html' },
+        'experience.html': { next: 'projects.html', previous: 'resume.html' },
+        'resume.html': { next: 'resume.html', previous: 'experience.html' },
+    };
+
+    // Get the current page from the URL
+    var currentPage = window.location.pathname.split('/').pop(); // Get the current page file name
+
+    // Determine the next and previous pages based on the mapping
+    var nextPage = pageMapping[currentPage] ? pageMapping[currentPage].next : 'default-next.html';
+    var previousPage = pageMapping[currentPage] ? pageMapping[currentPage].previous : 'default-previous.html';
+
+    hammer.on('swipeleft', function () {
+        // Navigate to the next page
+        window.location.href = nextPage;
+    });
+
+    hammer.on('swiperight', function () {
+        // Navigate to the previous page
+        window.location.href = previousPage;
+    });
+});

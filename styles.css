@@ -387,6 +387,10 @@ footer ul li a {
     color: inherit;
 }
 
+.projects-content, .research-content {
+    height: 500px; /* Adjust as needed */
+}
+
 
 .education-section {
     width: 60%;
