@@ -436,6 +436,12 @@ footer ul li a {
     font-size: 0.9em;
 }
 
+.education-item .details {
+    text-align: center; /* Center the text and links inside the details div */
+    margin: 0 auto; /* Center the entire details div horizontally */
+}
+
+
 .education-item .year {
     font-weight: 300;
     font-size: 0.9em;
