@@ -63,3 +63,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    var container = document.getElementById('page-container'); // Replace with the ID of your container
+
+    var hammer = new Hammer(container);
+
+    hammer.on('swipeleft', function () {
+        // Navigate to the next page
+        window.location.href = 'next-page.html'; // Replace with your URL or navigation logic
+    });
+
+    hammer.on('swiperight', function () {
+        // Navigate to the previous page
+        window.location.href = 'previous-page.html'; // Replace with your URL or navigation logic
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var startX;
+    var startY;
+    var threshold = 100; // Minimum distance to detect swipe
+
+    document.addEventListener('touchstart', function (e) {
+        var touch = e.touches[0];
+        startX = touch.pageX;
+        startY = touch.pageY;
+    });
+
+    document.addEventListener('touchend', function (e) {
+        var touch = e.changedTouches[0];
+        var endX = touch.pageX;
+        var endY = touch.pageY;
+
+        var diffX = endX - startX;
+        var diffY = endY - startY;
+
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > threshold) {
+            if (diffX > 0) {
+                // Swipe right
+                window.location.href = 'previous-page.html'; // Replace with your URL or navigation logic
+            } else {
+                // Swipe left
+                window.location.href = 'next-page.html'; // Replace with your URL or navigation logic
+            }
+        }
+    });
+});
+
