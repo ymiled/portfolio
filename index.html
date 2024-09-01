@@ -162,6 +162,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var container = document.getElementById('page-container'); // Replace with the ID of your container
+
+    var hammer = new Hammer(container);
+
+    hammer.on('swipeleft', function () {
+        // Next page
+        window.location.href = 'projects.html'; 
+    });
+});
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>

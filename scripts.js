@@ -65,22 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    var container = document.getElementById('page-container'); // Replace with the ID of your container
-
-    var hammer = new Hammer(container);
-
-    hammer.on('swipeleft', function () {
-        // Navigate to the next page
-        window.location.href = 'next-page.html'; // Replace with your URL or navigation logic
-    });
-
-    hammer.on('swiperight', function () {
-        // Navigate to the previous page
-        window.location.href = 'previous-page.html'; // Replace with your URL or navigation logic
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
     var startX;
     var startY;
     var threshold = 100; // Minimum distance to detect swipe
