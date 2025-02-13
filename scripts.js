@@ -29,7 +29,7 @@ backToTopButton.addEventListener('click', (e) => {
 // Typing effect initialization
 document.addEventListener('DOMContentLoaded', function() {
     new Typed('.typing-text', {
-        strings: ["an engineering student", "a quant enthusiast", "a data enthusiast"], // Add more strings if needed
+        strings: ["an engineering student", "a ML enthusiast", "a data enthusiast"], // Add more strings if needed
         loop: true, // Loop through the strings indefinitely
         typeSpeed: 55, // Speed of typing
         backSpeed: 35, // Speed of backspacing
