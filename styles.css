@@ -773,3 +773,119 @@ body.dark-mode .download-link:hover {
     color:rgb(140, 36, 119);
 }
 
+
+.experience-section {
+            margin-bottom: 50px;
+}
+
+.experience-card {
+    background: var(--card-bg);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.experience-title {
+    font-weight: bold;
+    color: var(--dark);
+    font-size: 1.1em;
+}
+
+.experience-date {
+    color: var(--gray);
+    font-style: italic;
+}
+
+.experience-org {
+    color: var(--secondary);
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.experience-location {
+    color: var(--gray);
+    font-size: 0.9em;
+}
+
+.experience-items {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.experience-item {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.experience-item:before {
+    content: "•";
+    color: var(--secondary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.topics {
+    font-style: italic;
+    margin-top: 5px;
+    padding-left: 15px;
+    color: var(--dark);
+}
+
+/* Dark mode toggle styles */
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#darkmode-toggle {
+    display: none;
+}
+
+#darkmode-toggle:checked ~ .toggle-label .moon-icon {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+#darkmode-toggle:checked ~ .toggle-label .sun-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#darkmode-toggle:not(:checked) ~ .toggle-label .sun-icon {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+#darkmode-toggle:not(:checked) ~ .toggle-label .moon-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .experience-date {
+        margin-top: 5px;
+    }
+}
