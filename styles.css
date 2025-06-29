@@ -111,7 +111,8 @@ body {
 nav {
     height: 10%;
     padding: 15px 0;
-    position: relative; 
+    position: fixed; 
+    z-index: 2;  /* to ensure the navigation bar is always on top */
 }
 
 .index-nav {
@@ -787,6 +788,11 @@ body.dark-mode .download-link:hover {
     position: relative;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
 .experience-header {
     display: flex;
