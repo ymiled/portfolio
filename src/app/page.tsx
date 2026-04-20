@@ -2,6 +2,8 @@ import TypedText from '@/components/TypedText'
 import Image from 'next/image'
 
 export default function Home() {
+  const imageBasePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+
   return (
     <section className="hero-section">
       <div className="container-typewriter">
@@ -28,7 +30,7 @@ export default function Home() {
           pure mathematics, computer science, and physics.
         </p>
         <Image
-          src="/images/my_photo.jpg"
+          src={`${imageBasePath}/images/my_photo.jpg`}
           alt="Youssef Miled"
           width={210}
           height={310}
@@ -42,7 +44,7 @@ export default function Home() {
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C" className="skill-logo" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" className="skill-logo" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" className="skill-logo" />
-          <Image src="/images/ocaml_logo.webp" alt="OCaml" width={40} height={40} className="skill-logo" />
+          <Image src={`${imageBasePath}/images/ocaml_logo.webp`} alt="OCaml" width={40} height={40} className="skill-logo" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" className="skill-logo" />
           <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" alt="Java" className="skill-logo" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="skill-logo" />
