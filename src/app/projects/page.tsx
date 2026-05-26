@@ -5,13 +5,23 @@ const projects = [
     href: "https://satlyt.ai/",
   },
   {
+    title: "Vulcan OmniPro Assistant",
+    description: "Full-stack multimodal assistant for the Vulcan OmniPro 220 welder — five specialized agents (orchestrator, retrieval, vision, diagnostic, artifact) orchestrated through a central router with WebSocket streaming and LRU caching. Vision agent parses product manual images to generate interactive React components, SVG diagrams, and Mermaid flowcharts; hybrid BM25 + semantic search with cross-encoder reranking. Deployed on Fly.io via Docker (React 18 / TypeScript frontend, FastAPI + PostgreSQL backend).",
+    href: "https://github.com/ymiled/vulcan-omnipro-assistant",
+  },
+  {
+    title: "Voice AI Freight Platform",
+    description: "End-to-end freight brokerage platform with an autonomous voice agent handling 24/7 inbound carrier calls — FMCSA verification, fuzzy load matching, and rule-based negotiation engine with margin protection. Real-time metrics dashboard tracks booking rates, revenue, and carrier sentiment. Built with Next.js / TypeScript frontend and FastAPI + SQLite backend; containerized via Docker multi-stage builds and deployed to Fly.io.",
+    href: "https://github.com/ymiled/happyrobot_challenge",
+  },
+  {
     title: "AgentProbe",
-    description: "Built a red-teaming framework for AI agent systems deploying a four-agent adversarial swarm.",
+    description: "Built a red-teaming framework for AI agent systems deploying a four-agent adversarial swarm (Recon, Attack, Evaluator, Reporter) to identify prompt injection, PII leakage, and policy violations. Hybrid evaluation engine combines deterministic rules, regex pipelines, and LLM-based scoring aligned with OWASP LLM risk categories.",
     href: "https://github.com/ymiled/AgentProbe",
   },
   {
     title: "Enterprise Nervous System",
-    description: "Cross-silo incident-resolution swarm that queries logs, GitHub, and Jira to automate root-cause analysis.",
+    description: "Multi-agent incident response platform using AG2 swarms and MCP, orchestrating parallel retrieval across logs, GitHub, and Jira to automate root-cause analysis and postmortem generation in under 19 seconds per incident. Evaluation pipeline spans 21 production-style failure scenarios with deterministic scoring achieving 80% performance.",
     href: "https://github.com/ymiled/enterprise_nervous_system",
   },
   {
@@ -21,7 +31,7 @@ const projects = [
   },
   {
     title: "Smooth Cascade Unlearning through Reversed Self-Distillation",
-    description: "Researched in-context unlearning and parameter-efficient fine-tuning to make LLMs forget private data.",
+    description: "Machine unlearning framework (CISPA Helmholtz Center) escalating in-context → LoRA → full fine-tuning by forget-set size; applied reversed self-distillation to align model versions and minimize membership inference risk. Validated on SST-2, AGNews, and MIT Movies with LiRA membership inference auditing on OLMo 2 1B.",
     href: null,
   },
   {
