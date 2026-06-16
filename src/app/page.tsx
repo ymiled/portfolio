@@ -25,23 +25,20 @@ export default function Home() {
 
       <div className="prose">
         <p>
-          Hi, I&apos;m Youssef. I study Operations Research at UC Berkeley, and I care most
-          about the place where mathematics, algorithms, and machine learning meet
-          real decisions. Lately that means building AI agents and systems that turn
-          messy, unstructured information into something a machine can act on.
+          Hi, I&apos;m Youssef, a Master&apos;s student in Operations Research at UC Berkeley,
+          with a deep passion for mathematics and computer science. I was previously a research
+          intern in the SprintML lab at{" "}
+          <a href="https://cispa.de" target="_blank" rel="noopener">CISPA Helmholtz Center for Information Security</a>.
+          Throughout my academic and research experiences, I&apos;ve cultivated skills in pure
+          mathematics, algorithms, programming, and machine learning. I am interested in building
+          AI agents, machine learning systems, and automation tools for real-world decision-making.
         </p>
         <p>
-          I was a research intern in the{" "}
-          <a href="https://cispa.de" target="_blank" rel="noopener">SprintML lab</a> at
-          CISPA Helmholtz Center for Information Security, working on unlearning for
-          large language models. Before Berkeley I studied at{" "}
+          I was previously a student at{" "}
           <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener">Centrale Lyon</a>,
-          and before that in the MP2I/MPI preparatory classes at Lycée Champollion, where I
-          built a foundation in pure mathematics, computer science, and physics.
-        </p>
-        <p>
-          I still teach: I run weekly oral exams in mathematics for students preparing for
-          France&apos;s Grandes Écoles, and I TA at Berkeley.
+          and in the MP2I/MPI preparatory classes at Lycée Champollion (a program designed to
+          prepare students for the entrance to the top French &apos;Grandes Ecoles&apos;) where I
+          developed a strong foundation in pure mathematics, computer science, and physics.
         </p>
       </div>
 

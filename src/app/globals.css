@@ -1,4 +1,3 @@
-/* ─── Design tokens ──────────────────────────────────── */
 :root {
   --bg: #fbfaf7;
   --bg-soft: #f3f1ec;
@@ -50,7 +49,6 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-/* ─── Layout shell ───────────────────────────────────── */
 .content {
   max-width: var(--measure);
   margin: 0 auto;
@@ -71,7 +69,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--faint);
 }
 
-/* ─── Navbar ─────────────────────────────────────────── */
 .navbar {
   max-width: var(--measure);
   margin: 0 auto;
@@ -119,7 +116,6 @@ a { color: inherit; text-decoration: none; }
 }
 .dark-mode-btn:hover { color: var(--text); }
 
-/* ─── Generic prose links ────────────────────────────── */
 .prose a,
 .inline-link {
   color: var(--text);
@@ -132,7 +128,6 @@ a { color: inherit; text-decoration: none; }
 .prose a:hover,
 .inline-link:hover { color: var(--accent); }
 
-/* ─── Eyebrow / section label ────────────────────────── */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -142,7 +137,6 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 1.4rem;
 }
 
-/* ─── Home / hero ────────────────────────────────────── */
 .hero {
   margin-top: 3.2rem;
 }
@@ -200,7 +194,6 @@ a { color: inherit; text-decoration: none; }
 }
 .prose p:last-child { margin-bottom: 0; }
 
-/* ─── Tools line ─────────────────────────────────────── */
 .tools {
   margin-top: 2.6rem;
   padding-top: 1.6rem;
@@ -213,7 +206,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-/* ─── Social row ─────────────────────────────────────── */
 .social {
   margin-top: 2.4rem;
   display: flex;
@@ -228,7 +220,6 @@ a { color: inherit; text-decoration: none; }
 .social a:hover { color: var(--accent); transform: translateY(-1px); }
 .social svg { width: 19px; height: 19px; }
 
-/* ─── Page header (inner pages) ──────────────────────── */
 .page-head {
   margin-top: 3.2rem;
   margin-bottom: 2.6rem;
@@ -245,7 +236,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.98rem;
 }
 
-/* ─── Entry list (projects + experience) ─────────────── */
 .entries { display: flex; flex-direction: column; }
 
 .entry {
@@ -319,13 +309,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--faint);
 }
 
-/* ─── Resume ─────────────────────────────────────────── */
 .resume-line {
   font-size: 1.05rem;
 }
 .resume-line .arrow { color: var(--faint); margin-left: 0.25rem; }
 
-/* ─── Responsive ─────────────────────────────────────── */
 @media (max-width: 560px) {
   body { font-size: 18px; }
   .hero-name { font-size: 2.1rem; }

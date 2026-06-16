@@ -7,13 +7,6 @@ const projects = [
     href: "https://satlyt.ai/",
   },
   {
-    title: "Vulcan OmniPro Assistant",
-    meta: "2025",
-    description:
-      "Full-stack multimodal assistant for the Vulcan OmniPro 220 welder: five specialized agents (orchestrator, retrieval, vision, diagnostic, artifact) behind a central router with WebSocket streaming. The vision agent turns manual images into interactive React components, SVG diagrams, and Mermaid flowcharts; hybrid BM25 + semantic search with cross-encoder reranking. React / FastAPI / PostgreSQL on Fly.io.",
-    href: "https://github.com/ymiled/vulcan-omnipro-assistant",
-  },
-  {
     title: "Voice AI Freight Platform",
     meta: "2025",
     description:
@@ -21,18 +14,25 @@ const projects = [
     href: "https://github.com/ymiled/happyrobot_challenge",
   },
   {
-    title: "AgentProbe",
-    meta: "2025",
-    description:
-      "A red-teaming framework for AI agent systems: a four-agent adversarial swarm (Recon, Attack, Evaluator, Reporter) that surfaces prompt injection, PII leakage, and policy violations. Hybrid evaluation combines deterministic rules, regex pipelines, and LLM scoring aligned with OWASP LLM risk categories.",
-    href: "https://github.com/ymiled/AgentProbe",
-  },
-  {
     title: "Enterprise Nervous System",
     meta: "2025",
     description:
       "Multi-agent incident response using AG2 swarms and MCP — parallel retrieval across logs, GitHub, and Jira to automate root-cause analysis and postmortems in under 19 seconds per incident. Evaluated over 21 production-style failure scenarios with deterministic scoring.",
     href: "https://github.com/ymiled/enterprise_nervous_system",
+  },
+  {
+    title: "Vulcan OmniPro Assistant",
+    meta: "2025",
+    description:
+      "Full-stack multimodal assistant for the Vulcan OmniPro 220 welder: five specialized agents (orchestrator, retrieval, vision, diagnostic, artifact) behind a central router with WebSocket streaming. The vision agent turns manual images into interactive React components, SVG diagrams, and Mermaid flowcharts; hybrid BM25 + semantic search with cross-encoder reranking. React / FastAPI / PostgreSQL on Fly.io.",
+    href: "https://github.com/ymiled/vulcan-omnipro-assistant",
+  },
+  {
+    title: "AgentProbe",
+    meta: "2025",
+    description:
+      "A red-teaming framework for AI agent systems: a four-agent adversarial swarm (Recon, Attack, Evaluator, Reporter) that surfaces prompt injection, PII leakage, and policy violations. Hybrid evaluation combines deterministic rules, regex pipelines, and LLM scoring aligned with OWASP LLM risk categories.",
+    href: "https://github.com/ymiled/AgentProbe",
   },
   {
     title: "CodeBase Agent",
