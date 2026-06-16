@@ -7,6 +7,7 @@
   --rule: #e4e0d8;
   --accent: #9a3b2e;
   --accent-soft: #c46b58;
+  --select: rgba(154, 59, 46, 0.14);
 
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Menlo", monospace;
@@ -23,6 +24,7 @@ html.dark {
   --rule: #2c2a32;
   --accent: #e0907f;
   --accent-soft: #c46b58;
+  --select: rgba(224, 144, 127, 0.22);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -45,7 +47,8 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-::selection { background: var(--accent); color: var(--bg); }
+::selection { background: var(--select); }
+html.dark ::selection { background: var(--select); }
 
 a { color: inherit; text-decoration: none; }
 
