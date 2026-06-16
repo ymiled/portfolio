@@ -1,68 +1,73 @@
 const experiences = [
   {
     title: "Graduate Student Assistant",
-    date: "September 2025 - May 2026",
+    date: "Sep 2025 – May 2026",
     org: "Satlyt",
     location: "San Francisco, USA",
     items: [
-      "Built an AI agent workflow with tool-calling capabilities for satellite edge computing, extracting actionable tasks from unstructured logs and routing them to specialized models.",
-      "Developed an evaluation-driven telemetry workflow and optimized prompt templates for quality and speed trade-offs, including RAG integration to improve troubleshooting coverage.",
+      "Built an AI agent workflow with tool-calling for satellite edge computing, extracting actionable tasks from unstructured logs and routing them to specialized models.",
+      "Developed an evaluation-driven telemetry workflow and tuned prompt templates for quality/speed trade-offs, with RAG integration to widen troubleshooting coverage.",
     ],
   },
   {
     title: "ML Research Intern",
-    date: "May 2025 - July 2025",
-    org: "CISPA Helmholtz Center for Information Security",
+    date: "May 2025 – Jul 2025",
+    org: "CISPA Helmholtz Center",
     location: "Saarbrücken, Germany",
     items: [
-      "Machine learning research intern in the SprintML Group (Secure, Private, Robust, Interpretable, and Trustworthy Machine Learning).",
-      "Working on unlearning for LLMs.",
+      "Research intern in the SprintML group (Secure, Private, Robust, Interpretable, Trustworthy ML).",
+      "Worked on unlearning for large language models.",
     ],
   },
   {
     title: "Teaching Assistant",
-    date: "Fall 2025 - Spring 2026",
+    date: "Fall 2025 – Spring 2026",
     org: "UC Berkeley",
     location: "Berkeley, CA, USA",
     items: [
-      "TA for Physics 8A (Spring 2026), supporting students in mechanics, problem-solving sessions, and exam preparation.",
-      "TA for Computer Simulations with Jupyter Notebooks, guiding students on notebook-based computational workflows and simulation assignments.",
+      "TA for Physics 8A (Spring 2026): mechanics, problem-solving sessions, and exam prep.",
+      "TA for Computer Simulations with Jupyter Notebooks: notebook-based computational workflows and simulation assignments.",
     ],
   },
   {
-    title: "Oral Examiner",
-    date: "September 2024 - Present",
-    org: "Ministry of Higher Education and Scientific Research",
+    title: "Oral Examiner in Mathematics",
+    date: "Sep 2024 – Present",
+    org: "Ministry of Higher Education",
     location: "France",
     items: [
-      "Oral examiner in mathematics for first-year preparatory class undergraduates. Conducting weekly sessions to prepare students for the competitive entrance exams to France's top-tier engineering schools (Grandes Écoles).",
+      "Run weekly oral exams for first-year preparatory-class students preparing for the competitive entrance exams to France's Grandes Écoles.",
     ],
-    topics: "Topics covered: Combinatorics, Probability, Real Analysis, Complex numbers, Differential equations, Calculus, Number Theory, Algebraic Structures, Linear Algebra, Symmetric Groups and Determinants.",
+    note:
+      "Combinatorics, probability, real analysis, complex numbers, differential equations, calculus, number theory, algebraic structures, linear algebra, symmetric groups, and determinants.",
   },
 ]
 
 export default function Experience() {
   return (
-    <main className="page">
-      <h1 className="section-heading">Experience</h1>
-      <div className="cards-list">
+    <section>
+      <header className="page-head">
+        <h1 className="page-title">Experience</h1>
+      </header>
+
+      <div className="entries">
         {experiences.map((exp) => (
-          <div key={exp.title} className="card">
-            <div className="exp-header">
-              <span className="exp-title">{exp.title}</span>
-              <span className="exp-date">{exp.date}</span>
+          <article key={exp.title} className="entry">
+            <div className="entry-meta">
+              {exp.date}
+              <span className="org">{exp.org} · {exp.location}</span>
             </div>
-            <div className="exp-org">{exp.org}</div>
-            <div className="exp-location">{exp.location}</div>
-            <ul className="exp-items">
-              {exp.items.map((item, i) => (
-                <li key={i} className="exp-item">{item}</li>
-              ))}
-            </ul>
-            {"topics" in exp && <p className="exp-topics">{exp.topics}</p>}
-          </div>
+            <div>
+              <h2 className="entry-title">{exp.title}</h2>
+              <ul className="entry-items">
+                {exp.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+              {"note" in exp && <p className="entry-note">{exp.note}</p>}
+            </div>
+          </article>
         ))}
       </div>
-    </main>
+    </section>
   )
 }

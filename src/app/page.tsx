@@ -1,72 +1,66 @@
-import TypedText from '@/components/TypedText'
-import Image from 'next/image'
+import Image from "next/image"
+import TypedRole from "@/components/TypedRole"
+
+const imageBasePath = process.env.NODE_ENV === "production" ? "/portfolio" : ""
 
 export default function Home() {
-  const imageBasePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
-
   return (
-    <section className="hero-section">
-      <div className="container-typewriter">
-        <h1 className="hero-name">Youssef Miled</h1>
-        <p className="hero-tagline">I'm <TypedText /></p>
-      </div>
-
-      <div className="container-me">
-        <p className="hero-bio">
-          Hi, I'm Youssef, a Master's student in Operations Research at UC Berkeley, with a deep passion
-          for mathematics and computer science. I was previously a research intern in the SprintML lab at{' '}
-          <a href="https://cispa.de" target="_blank" rel="noopener">
-            CISPA Helmholtz Center for Information Security
-          </a>. Throughout my academic and research experiences, I've cultivated skills in pure mathematics,
-          algorithms, programming, and machine learning. I am interested in building AI agents, machine learning
-          systems, and automation tools for real-world decision-making.
-          <br /><br />
-          I was previously a student at{' '}
-          <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener">
-            Centrale Lyon
-          </a>
-          , and in the MP2I/MPI preparatory classes at Lycée Champollion (a program designed to prepare students
-          for the entrance to the top French 'Grandes Ecoles') where I developed a strong foundation in
-          pure mathematics, computer science, and physics.
-        </p>
+    <section className="hero">
+      <div className="hero-top">
+        <div>
+          <h1 className="hero-name">Youssef Miled</h1>
+          <p className="hero-role">
+            <TypedRole />
+          </p>
+        </div>
         <Image
           src={`${imageBasePath}/images/my_photo.jpg`}
           alt="Youssef Miled"
-          width={210}
-          height={310}
+          width={96}
+          height={96}
           className="hero-photo"
+          priority
         />
       </div>
 
-      <div className="programming-languages">
-        <h3>My skills</h3>
-        <div className="skills-grid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" className="skill-logo" />
-          <Image src={`${imageBasePath}/images/ocaml_logo.webp`} alt="OCaml" width={40} height={40} className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" alt="Java" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" className="skill-logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" className="skill-logo" />
-        </div>
+      <div className="prose">
+        <p>
+          Hi, I&apos;m Youssef. I study Operations Research at UC Berkeley, and I care most
+          about the place where mathematics, algorithms, and machine learning meet
+          real decisions. Lately that means building AI agents and systems that turn
+          messy, unstructured information into something a machine can act on.
+        </p>
+        <p>
+          I was a research intern in the{" "}
+          <a href="https://cispa.de" target="_blank" rel="noopener">SprintML lab</a> at
+          CISPA Helmholtz Center for Information Security, working on unlearning for
+          large language models. Before Berkeley I studied at{" "}
+          <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener">Centrale Lyon</a>,
+          and before that in the MP2I/MPI preparatory classes at Lycée Champollion, where I
+          built a foundation in pure mathematics, computer science, and physics.
+        </p>
+        <p>
+          I still teach: I run weekly oral exams in mathematics for students preparing for
+          France&apos;s Grandes Écoles, and I TA at Berkeley.
+        </p>
       </div>
 
-      <div className="social-icons">
-        <a href="https://linkedin.com/in/youssef-miled" target="_blank" rel="noopener" className="social-link">
-          <i className="fab fa-linkedin" />
+      <div className="tools">
+        <p className="eyebrow">Tools I reach for</p>
+        <p className="tools-list">
+          Python · C / C++ · OCaml · SQL · PyTorch · TypeScript · React · Next.js
+        </p>
+      </div>
+
+      <div className="social">
+        <a href="https://linkedin.com/in/youssef-miled" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg>
         </a>
-        <a href="https://github.com/ymiled" target="_blank" rel="noopener" className="social-link">
-          <i className="fab fa-github" />
+        <a href="https://github.com/ymiled" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
         </a>
-        <a href="mailto:youssef_miled@berkeley.edu" className="social-link">
-          <i className="fas fa-envelope" />
+        <a href="mailto:youssef_miled@berkeley.edu" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
         </a>
       </div>
     </section>

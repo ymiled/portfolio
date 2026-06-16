@@ -2,18 +2,23 @@ import Link from "next/link"
 
 export default function Resume() {
   return (
-    <main className="page page-centered">
-      <h1 className="section-heading">Youssef Miled — CV</h1>
-      <div className="download-card">
+    <section>
+      <header className="page-head">
+        <h1 className="page-title">Curriculum Vitae</h1>
+        <p className="page-sub">A one-page summary of my background and work.</p>
+      </header>
+
+      <p className="resume-line">
         <Link
           href="/doc/resume_Youssef_Miled.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="download-link"
+          className="inline-link"
         >
-          Click here to open my resume
+          Open my CV (PDF)
         </Link>
-      </div>
-    </main>
+        <span className="arrow">↗</span>
+      </p>
+    </section>
   )
 }

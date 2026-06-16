@@ -1,16 +1,34 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import DarkModeToggle from "./DarkModeToggle"
 
+const links = [
+  { href: "/", label: "home" },
+  { href: "/projects", label: "projects" },
+  { href: "/experience", label: "experience" },
+  { href: "/resume", label: "cv" },
+]
+
 export default function Navbar() {
+  const pathname = usePathname()?.replace(/\/$/, "") || "/"
+
   return (
     <nav className="navbar">
-      <ul className="nav-list">
-        <li><Link href="/" className="nav-link">Home</Link></li>
-        <li><Link href="/projects" className="nav-link">Projects</Link></li>
-        <li><Link href="/experience" className="nav-link">Experience</Link></li>
-        <li><Link href="/resume" className="nav-link">CV</Link></li>
-        <li><DarkModeToggle /></li>
-      </ul>
+      <Link href="/" className="nav-brand">Youssef Miled</Link>
+      <div className="nav-links">
+        {links.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`nav-link${pathname === href ? " is-active" : ""}`}
+          >
+            {label}
+          </Link>
+        ))}
+        <DarkModeToggle />
+      </div>
     </nav>
   )
 }
