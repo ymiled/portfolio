@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react"
 
 const LINES = [
-  "Operations Research grad student at UC Berkeley.",
-  "Working on AI agents and applied machine learning.",
+  "Operations Research MEng student at UC Berkeley.",
+  "RL environments, formal verification, and agent evaluation.",
 ]
 
 const TYPE_MS = 38

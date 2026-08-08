@@ -1,13 +1,17 @@
 const experiences = [
   {
-    title: "Graduate Student Assistant",
+    title: "Graduate Research Assistant",
     date: "Sep 2025 – May 2026",
-    org: "Satlyt",
-    location: "San Francisco, USA",
+    org: "Satlyt (UC Berkeley MEng capstone)",
+    location: "San Francisco, CA, USA",
     items: [
-      "Built an AI agent workflow with tool-calling for satellite edge computing, extracting actionable tasks from unstructured logs and routing them to specialized models.",
-      "Developed an evaluation-driven telemetry workflow and tuned prompt templates for quality/speed trade-offs, with RAG integration to widen troubleshooting coverage.",
+      "Owned the language-model side of an onboard satellite operations assistant running fully offline on an NVIDIA Jetson Orin Nano (8 GB, 7–15 W), working directly with the founder and CTO.",
+      "Built the log summarization and troubleshooting tools behind a small-language-model orchestrator: chunked windows, a severity-keyword filter ahead of inference, and TF-IDF retrieval over a structured failure knowledge base.",
+      "Built the evaluation harness the system was tuned against: 10 prompt configurations across 6 quantized models (1–4B) scored by an LLM judge on correctness, coverage, and actionability. Prompt framing outweighed model size, 7.81/10 against 3.73/10 on the same model.",
+      "Served IBM Granite 4.0 (3B) as a 4-bit Q4_K_M GGUF through llama.cpp, tuning GPU layer offload, batch size, and context length to 62.6 tok/s inside the power envelope.",
     ],
+    note:
+      "Fung Institute MEng Technical Leadership Award for scoping and solution design on this project. Co-authored the 30-page capstone report on system design, evaluation methodology, and market analysis for space-edge AI.",
   },
   {
     title: "ML Research Intern",
@@ -16,17 +20,19 @@ const experiences = [
     location: "Saarbrücken, Germany",
     items: [
       "Research intern in the SprintML group (Secure, Private, Robust, Interpretable, Trustworthy ML).",
-      "Worked on unlearning for large language models.",
+      "Designed the switching policy for a cascade unlearning framework that escalates in-context to LoRA to full fine-tuning as the forget set grows, and found that the stage transitions themselves leak an attackable membership signal.",
+      "Built the measurement side end to end: a cross-stage ForgetLiRA membership-inference audit reporting TPR@1%FPR on OLMo 2 1B across SST-2, AGNews, and MIT-Movies, with 10 shadow models trained concurrently on a SLURM and Docker cluster.",
+      "Second project: ported UnitMem neuron-level memorization analysis to the RAR autoregressive image generator on ImageNet-1k, and traced top-memorizing units back to the exact training images driving them.",
     ],
   },
   {
-    title: "Teaching Assistant",
+    title: "Graduate Student Instructor",
     date: "Fall 2025 – Spring 2026",
     org: "UC Berkeley",
     location: "Berkeley, CA, USA",
     items: [
-      "TA for Physics 8A (Spring 2026): mechanics, problem-solving sessions, and exam prep.",
-      "TA for Computer Simulations with Jupyter Notebooks: notebook-based computational workflows and simulation assignments.",
+      "GSI for Physics 8A (Spring 2026): mechanics labs, discussions, problem-solving sessions, and exam prep.",
+      "GSI for Computer Simulations with Jupyter Notebooks: notebook-based computational workflows and simulation assignments.",
     ],
   },
   {

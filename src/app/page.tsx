@@ -28,13 +28,20 @@ export default function Home() {
           Hi, I&apos;m Youssef, a Master&apos;s student in Operations Research at UC Berkeley,
           with a deep passion for mathematics and computer science. I was previously a research
           intern in the SprintML lab at{" "}
-          <a href="https://cispa.de" target="_blank" rel="noopener">CISPA Helmholtz Center for Information Security</a>.
-          Throughout my academic and research experiences, I&apos;ve cultivated skills in pure
-          mathematics, algorithms, programming, and machine learning. I am interested in building
-          AI agents, machine learning systems, and automation tools for real-world decision-making.
+          <a href="https://cispa.de" target="_blank" rel="noopener">CISPA Helmholtz Center for Information Security</a>,
+          where I worked on unlearning and privacy auditing for language models, and on
+          memorization in generative image models. Throughout my academic and research
+          experiences, I&apos;ve cultivated skills in pure mathematics, algorithms, programming,
+          and machine learning.
         </p>
         <p>
-          I was previously a student at{" "}
+          These days I am mostly interested in reinforcement learning environments, formal
+          verification, and the evaluation of machine learning systems. I also enjoy building
+          AI agents, machine learning systems, and automation tools for real-world
+          decision-making.
+        </p>
+        <p>
+          Before Berkeley I studied at{" "}
           <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener">Centrale Lyon</a>,
           and in the MP2I/MPI preparatory classes at Lycée Champollion (a program designed to
           prepare students for the entrance to the top French &apos;Grandes Ecoles&apos;) where I
@@ -43,9 +50,27 @@ export default function Home() {
       </div>
 
       <div className="tools">
-        <p className="eyebrow">Tools I reach for</p>
+        <p className="eyebrow">Interests</p>
         <p className="tools-list">
-          Python · C / C++ · OCaml · SQL · PyTorch · TypeScript · React · Next.js
+          RL environments and reward design · formal verification and proof automation ·
+          evaluation of agentic systems · privacy, unlearning, and memorization in LLMs
+        </p>
+      </div>
+
+      <div className="tools">
+        <p className="eyebrow">Selected coursework at Berkeley</p>
+        <p className="tools-list">
+          Machine Learning and Data Analytics I &amp; II (transformers, diffusion, SFT / LoRA,
+          RLHF / DPO, RL) · Mathematical Programming I &amp; II · Applied Stochastic Processes ·
+          Stochastic Optimization for Machine Learning
+        </p>
+      </div>
+
+      <div className="tools">
+        <p className="eyebrow">Tools</p>
+        <p className="tools-list">
+          Python · OCaml · C · PyTorch · TypeScript · React · Next.js · FastAPI ·
+          Docker · Lean 4
         </p>
       </div>
 
