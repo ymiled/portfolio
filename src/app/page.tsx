@@ -36,9 +36,7 @@ export default function Home() {
         </p>
         <p>
           These days I am mostly interested in reinforcement learning environments, formal
-          verification, and the evaluation of machine learning systems. I also enjoy building
-          AI agents, machine learning systems, and automation tools for real-world
-          decision-making.
+          verification, evaluation of machine learning systems, and ASI (Artificial Super Intelligence).
         </p>
         <p>
           Before Berkeley I studied at{" "}
@@ -52,8 +50,8 @@ export default function Home() {
       <div className="tools">
         <p className="eyebrow">Interests</p>
         <p className="tools-list">
-          RL environments and reward design · formal verification and proof automation ·
-          evaluation of agentic systems · privacy, unlearning, and memorization in LLMs
+          formal verification and proof automation · evaluation of agentic systems · RL
+          environments · privacy, unlearning, and memorization in LLMs · alignment and safety
         </p>
       </div>
 

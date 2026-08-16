@@ -229,7 +229,7 @@ export default function SmoothCascadeUnlearning() {
         </p>
 
         <p className="post-footnote">
-          Work done in the SprintML lab at CISPA.
+          Part of the work was done in the SprintML lab at CISPA with other contributors, then continued independently by myself.
         </p>
       </div>
     </article>

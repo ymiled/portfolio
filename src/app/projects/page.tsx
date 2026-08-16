@@ -3,7 +3,7 @@ const projects = [
     title: "Proof-Depth Decay: a Lean 4 RL environment for program verification",
     meta: "2026 · Lean 4, GRPO, LoRA",
     description:
-      "A reinforcement learning environment where the reward is the Lean kernel: a candidate proof either type-checks or it does not, so the signal cannot be gamed. Difficulty is set by how much of a lemma's dependency cone is withheld, and dependency edges are measured by deletion rather than declared. The corpus is a 784-line Volpano–Smith–Irvine information-flow type system written from scratch, no sorry, soundness audited under #print axioms to depend only on propext and Quot.sound: 14 theories, 158 lemmas, 2,607 tasks. The result: all-or-nothing grading distorts the difficulty curve. Binary pass rate decays 1.74x per depth level, but regrading the identical outputs by how many lemmas individually check decays only 1.12x, turning a depth-4 cell read as 0.00 into 0.46. Trained a prover with GRPO against the corrected reward (DeepSeek-Prover-V2-7B, LoRA, one RTX 4090): roughly 4x per-target credit on held-out theories in about 4 GPU-hours, with content-addressed parallel grading holding kernel verification to ~6% of a training step.",
+      "A reinforcement learning environment where the reward is the Lean kernel: a candidate proof either type-checks or it does not, so the signal cannot be gamed. Difficulty is set by how much of a lemma's dependency cone is withheld, and dependency edges are measured by necessity (removing a candidate parent and seeing the proof fail) rather than declared, since parsing proof terms is impossible in Lean 4 due to asynchronous elaboration. The corpus is a 784-line Volpano–Smith–Irvine information-flow type system written from scratch, no sorry, soundness audited under #print axioms to depend only on propext and Quot.sound: 14 theories, 158 lemmas, 2,607 tasks. All-or-nothing grading distorts the difficulty curve it's meant to measure: binary pass rate decays 1.74x per depth level, but regrading the same responses by how many lemmas individually check decays only 1.12x, a pattern confirmed at scale (p = 1.6×10⁻³, 134 tasks). Training against the corrected reward stalls at first, since 96% of rollouts land on the same reward at 0.5% accuracy and GRPO's advantage is zero by construction, until five interventions (expert-iteration cold start, per-target credit assignment, a difficulty-ledger sampler, between-stage distillation, stall detection with expert-iteration rescue) carry a domain-specialized DeepSeek-Prover-V2-7B through the full depth curriculum: per-target score 0.75 → 0.51 → 0.31 → 0.17 → 0.04 across depths 1–5, while its own pass@1 drops to zero past depth 1.",
     href: "https://github.com/ymiled/lean-proof-environments",
   },
   {
@@ -28,20 +28,6 @@ const projects = [
     href: "https://github.com/ymiled/AgentProbe",
   },
   {
-    title: "Removing Clipping Bias in DP-SGD: a critical assessment of DiceSGD",
-    meta: "2026 · IEOR 290",
-    description:
-      "DiceSGD adds an error-feedback residual to drop the clipping-bias constant from the DP-SGD convergence bound while preserving (ε, δ)-differential privacy. I worked through the Rényi and PRV accounting and the Poisson-subsampling amplification argument, reproduced the experiments with Opacus on MNIST and a ViT-small on CIFAR-10, surfaced an unstated two-threshold (C₂ ≥ C₁) sensitivity requirement, and found DiceSGD underperforming DPSGD-GC by up to 19.6 points at clip C = 0.1.",
-    href: null,
-  },
-  {
-    title: "CodeBase Agent",
-    meta: "2025",
-    description:
-      "Agentic code-refactoring system: a multi-agent pipeline that analyzes Python code and validates its own changes.",
-    href: "https://github.com/ymiled/codebase_agent",
-  },
-  {
     title: "Smooth Cascade Unlearning via Reversed Self-Distillation",
     meta: "2025 · CISPA",
     description:
@@ -63,6 +49,13 @@ const projects = [
     href: "https://github.com/ymiled/type-system-for-noninterference",
   },
   {
+    title: "Removing Clipping Bias in DP-SGD: a critical assessment of DiceSGD",
+    meta: "2026 · IEOR 290",
+    description:
+      "DiceSGD adds an error-feedback residual to drop the clipping-bias constant from the DP-SGD convergence bound while preserving (ε, δ)-differential privacy. I worked through the Rényi and PRV accounting and the Poisson-subsampling amplification argument, reproduced the experiments with Opacus on MNIST and a ViT-small on CIFAR-10, surfaced an unstated two-threshold (C₂ ≥ C₁) sensitivity requirement, and found DiceSGD underperforming DPSGD-GC by up to 19.6 points at clip C = 0.1.",
+    href: null,
+  },
+  {
     title: "Multi-Stage Playlist Continuation System",
     meta: "2026 · IEOR 242B",
     description:
@@ -73,7 +66,7 @@ const projects = [
     title: "Data Analysis for Table Tennis Matches",
     meta: "2024 · Centrale Lyon",
     description:
-      "Physics-based modeling of table tennis ball trajectories with player data to analyze bounce uncertainty zones and strike timing — feeding player classification and strategy.",
+      "Physics-based modeling of table tennis ball trajectories with player data to analyze bounce uncertainty zones and strike timing, feeding player classification and strategy.",
     href: "https://github.com/centralelyon/tt-perf",
   },
 ]

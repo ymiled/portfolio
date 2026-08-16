@@ -435,6 +435,43 @@ a { color: inherit; text-decoration: none; }
   color: var(--faint);
 }
 
+.post-figure {
+  margin: 1.6rem 0 1.8rem;
+}
+.post-figure svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.chart-grid { stroke: var(--rule); stroke-width: 1; }
+.chart-axis { stroke: var(--faint); stroke-width: 1; }
+.chart-tick {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  fill: var(--faint);
+}
+.chart-line {
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.chart-line-a { stroke: var(--text); }
+.chart-line-b { stroke: var(--faint); stroke-dasharray: 4 3; }
+
+.post-caption a {
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.18s ease;
+}
+.post-caption a:hover { color: var(--accent); }
+
+.chart-line-c { stroke: var(--accent-soft); }
+.chart-dot { fill: currentColor; }
+.chart-bar-text { fill: var(--text); }
+.chart-bar-accent { fill: var(--accent); }
+.chart-em { color: var(--accent); font-style: normal; }
+
 .post-footnote {
   margin-top: 2.6rem;
   padding-top: 1.4rem;

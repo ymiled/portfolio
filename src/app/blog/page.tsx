@@ -2,6 +2,13 @@ import Link from "next/link"
 
 const posts = [
   {
+    slug: "depth-dependency-binary-grading",
+    title: "Depth, dependency, and the cost of binary grading",
+    meta: "2026 · Lean 4",
+    blurb:
+      "Verifier-reward RL for theorem proving: a dependency graph reconstructed by necessity, why all-or-nothing grading distorts a compositional difficulty curve, and what it costs to train a 7B prover through the full depth curriculum.",
+  },
+  {
     slug: "smooth-cascade-unlearning",
     title: "Unlearning is a sequence",
     meta: "2025 · CISPA",

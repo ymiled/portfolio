@@ -14,7 +14,7 @@ const serif = Newsreader({
 export const metadata: Metadata = {
   title: "Youssef Miled",
   description:
-    "Youssef Miled — Operations Research graduate student at UC Berkeley working on machine learning, optimization, and AI agents.",
+    "Youssef Miled, Operations Research graduate student at UC Berkeley working on machine learning, optimization, and AI agents.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
